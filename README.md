@@ -15,7 +15,7 @@
 4、安装python,安装时勾选.path
 5、进入djangoProject文件夹，点击init.bat,再点击start.bat启动后台服务
 6、进入nginx文件夹找到start.bat 点击启动网页
-7、网站地址：http://127.0.0.1
+7、网站地址：http://127.0.0.1或127.0.0.1:8080
 8、提交后在djangoProject的log_type文件夹下有生成的所有sql日志，点击保存的在type文件夹下，也可点击查看分类下载,生成kingbase sql,hlive sql,创表语句在createtable文件夹下。
 9、整个文件夹放在英文目录，中文目录会出现启动错误。
 10、webutil下需要解压node_moudles.zip到当前目录。
