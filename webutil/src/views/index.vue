@@ -256,7 +256,7 @@
 				this.$message({ message:'执行成功,为保证准确性，请到数据库查看！',type: 'success'});
 			},
 			searchdatabase(){
-				// let word = "select count(*) from pg_class where relname = '"+this.tablename+"';"
+				// let word = "select count(*) from pg_class where relname = '"+this.tablename.toLowerCase()+"';"
 				let word = "select * from "+this.tablename+';'
 				let data = {
 					sql:word
@@ -269,7 +269,7 @@
 				})
 			},
 			constructdatabase(){
-				let word = "select a.attnum AS 序号,c.relname AS 表名,cast(obj_description(c.oid) AS varchar) AS 表名描述,a.attname AS 列名,t.typname AS 字段类型,CASE WHEN t.typlen = -1 THEN a.atttypmod - 4 ELSE t.typlen::integer END AS 字段大小 ,d.description AS 备注 from pg_attribute a left join pg_description d on d.objoid = a.attrelid and d.objsubid = a.attnum left join pg_class c on a.attrelid = c.oid left join pg_type t on a.atttypid = t.oid where a.attnum >= 0 and c.relname like  '"+ this.tablename+"'  order by c.relname desc,a.attnum asc;"
+				let word = "select a.attnum AS 序号,c.relname AS 表名,cast(obj_description(c.oid) AS varchar) AS 表名描述,a.attname AS 列名,t.typname AS 字段类型,CASE WHEN t.typlen = -1 THEN a.atttypmod - 4 ELSE t.typlen::integer END AS 字段大小 ,d.description AS 备注 from pg_attribute a left join pg_description d on d.objoid = a.attrelid and d.objsubid = a.attnum left join pg_class c on a.attrelid = c.oid left join pg_type t on a.atttypid = t.oid where a.attnum >= 0 and c.relname like  '"+ this.tablename.toLowerCase()+"'  order by c.relname desc,a.attnum asc;"
 				let data = {
 					sql:word
 				}
