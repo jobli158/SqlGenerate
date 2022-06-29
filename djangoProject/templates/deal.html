@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<body>
+
+<div style="text-align: right;margin-right: 50px">
+
+</div>
+<div style="display: flex;width:1500px;padding:20px;align-content: center;justify-content: center;flex-direction: column">
+
+    <h2>
+        {{ zn_table }}({{ tablename }}) &nbsp; &nbsp;<a style="text-decoration:none;color: dodgerblue;font-size: 15px" href="">返回查询</a>
+    </h2>
+
+    <ol>
+        {% for key,value in datas.items %}
+            <li >{{ value }}</li>
+        {% endfor %}
+    </ol>
+
+</div>
+</div>
+</body>
+<script>
+
+
+</script>
+</html>

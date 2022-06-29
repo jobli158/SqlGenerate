@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width:1500px;display: flex;justify-content:center;align-items: center;flex-direction: column;">
+    <form action="" method="post">
+        <div style="text-align: center">
+            <h3>表格数据转换</h3>
+        </div>
+        <br/>
+        <div>
+            中文表名:&nbsp;&nbsp;<input type="text" name="ztablename">
+            <br/>
+            <br/>
+            英文表名:&nbsp;&nbsp;<input type="text" name="tablename">
+            <br/>
+            <br/>
+
+            所属分类:&nbsp;&nbsp;
+            <select name="hangye" value="1">
+                <option value="国民经济核算">国民经济核算</option>
+                <option value="固定资产投资">固定资产投资</option>
+                <option value="对外经济贸易">对外经济贸易</option>
+                <option value="价格">价格</option>
+                <option value="财政">财政</option>
+                <option value="金融业">金融业</option>
+                <option value="保险业">保险业</option>
+                <option value="农业">农业</option>
+                <option value="工业">工业</option>
+                <option value="建筑业">建筑业</option>
+                <option value="科技">科技</option>
+                <option value="能源">能源</option>
+                <option value="交通运输">交通运输</option>
+                <option value="房地产">房地产</option>
+                <option value="批发与零售">批发与零售</option>
+                <option value="经济安全保障">经济安全保障</option>
+                <option value="人口">人口</option>
+                <option value="就业人员和工资">就业人员和工资</option>
+                <option value="人民生活">人民生活</option>
+                <option value="生态环境保护">生态环境保护</option>
+                <option value="绿色生态">绿色生态</option>
+                <option value="邮电和软件业">邮电和软件业</option>
+                <option value="住宿和餐饮业">住宿和餐饮业</option>
+                <option value="旅游业">旅游业</option>
+                <option value="教育">教育</option>
+                <option value="社会服务">社会服务</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp
+        </div>
+        <div>
+            输入行政区划等：
+            <br/><br/>
+            <textarea name="predata" style="height: 200px;width: 1000px"></textarea>
+        </div>
+        <div>
+            输入具体数据：<br/><br/>
+            <textarea name="data" style="height: 300px;width: 1000px"></textarea>
+        </div>
+        <div style="text-align: center">
+            <br/>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <form action="/download" method="post">
+            <select name="hangye">
+                <option value="国民经济核算">国民经济核算</option>
+                <option value="固定资产投资">固定资产投资</option>
+                <option value="对外经济贸易">对外经济贸易</option>
+                <option value="价格">价格</option>
+                <option value="财政">财政</option>
+                <option value="金融业">金融业</option>
+                <option value="保险业">保险业</option>
+                <option value="农业">农业</option>
+                <option value="工业">工业</option>
+                <option value="建筑业">建筑业</option>
+                <option value="科技">科技</option>
+                <option value="能源">能源</option>
+                <option value="交通运输">交通运输</option>
+                <option value="房地产">房地产</option>
+                <option value="批发与零售">批发与零售</option>
+                <option value="经济安全保障">经济安全保障</option>
+                <option value="人口">人口</option>
+                <option value="就业人员和工资">就业人员和工资</option>
+                <option value="人民生活">人民生活</option>
+                <option value="生态环境保护">生态环境保护</option>
+                <option value="绿色生态">绿色生态</option>
+                <option value="邮电和软件业">邮电和软件业</option>
+                <option value="住宿和餐饮业">住宿和餐饮业</option>
+                <option value="旅游业">旅游业</option>
+                <option value="教育">教育</option>
+                <option value="社会服务">社会服务</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="下载">
+        </form>
+    </div>
+</div>
+</body>
+</html>
